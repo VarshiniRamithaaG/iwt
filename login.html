@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<style>
+.container1{
+    border-style: solid;
+    width:400px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(234, 234, 234);
+    color:black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#myb{
+   
+    background-color: rgb(53, 137, 215);
+}
+
+body{
+    background-image: url('two.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+}
+.profile
+{
+ 
+    border-radius: 100px;
+    height:100px;
+    width:100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+</style>
+<body>
+    <div class="total">
+        <div class="container">
+            <b>
+                <h1 align="center" id="myh">Skill Building Workshop</h1>
+            </b>
+            <h3 align="center">The Temple of Learning!</h3>
+            <center><img src="giv.avif" alt="logo" class="profile"></center> <br>
+        </div>
+        <!DOCTYPE html>
+<center>
+    <div class="container1">
+        <form id="registrationForm" method="post" action="NewServlet1">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" name="Name" required><br><br>
+
+            <label for="email">Username or Email</label>
+            <input type="email" id="email" placeholder="Enter your email" name="Email" required><br><br>
+
+            <label for="college">Enter College</label>
+            <input type="text" id="college" placeholder="Enter your college" name="college" required><br><br>
+
+            <label for="degree">Degree</label>
+            <input type="text" id="degree" placeholder="Enter your degree" name="degree" required><br><br>
+
+            <label for="discipline">Discipline</label>
+            <input type="text" id="discipline" placeholder="Enter your discipline" name="discip" required><br><br>
+
+            <label for="year">Year of Passing</label>
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Select your year of passing</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+            </select><br><br>
+
+            <label for="city">Enter City</label>
+            <input type="text" id="city" placeholder="Enter your city" name="city" required><br><br>
+
+            <label>Gender</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</center>
+
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var college = document.getElementById("college").value.trim();
+            var degree = document.getElementById("degree").value.trim();
+            var year = document.getElementById("year").value.trim();
+            var discipline = document.getElementById("discipline").value.trim();
+            var city = document.getElementById("city").value.trim();
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var terms = document.getElementById("terms").checked;
+            var message = document.getElementById("myp");
+
+            if (!name || !email || !college || !degree || !year || !discipline || !city) {
+                message.innerHTML = "All fields are required.";
+                return;
+            }
+
+            if (!gender) {
+                message.innerHTML = "Please select your gender.";
+                return;
+            }
+
+            if (!terms) {
+                message.innerHTML = "You must agree to the terms and conditions.";
+                return;
+            }
+
+            message.innerHTML = "Form is valid and ready for submission!";
+        }
+    </script>
+</body>
+
+</html>
